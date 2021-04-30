@@ -1,0 +1,26 @@
+// default value của enum là giá trị đầu tiên
+
+syntax = "proto3";
+
+message Person {
+    int32               age = 1;
+    string              firsName = 2;
+    string              lastName = 3;
+    bytes               smallPicture = 4;
+    bool                is_validiated = 5;
+    float               height = 6;
+
+    repeated string     phoneNumbers = 7;
+
+    // enum là kiểu dữ liệu mà chúng ta biết sẵn các option của nó, concept là in hoa hết các option
+    enum EyeColour {
+        UNKNOWN_EYE_COLOUR = 0;
+        GREEN = 1;
+        BROWN = 2;
+        BLUE = 3;
+    }
+
+    // định nghĩa enum
+    EyeColour eyeColour = 8;
+    // default value của enum là giá trị đầu tiên của nó
+}

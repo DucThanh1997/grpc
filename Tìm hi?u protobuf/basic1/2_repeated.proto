@@ -1,0 +1,14 @@
+syntax = "proto3"
+
+message Person {
+    int32               age = 1;
+    string              firsName = 2;
+    string              lastName = 3;
+    bytes               smallPicture = 4;
+    bool                is_validiated = 5;
+    float               height = 6;
+
+    repeated string     phoneNumbers = 7
+}
+
+// repeated để biểu thị các trường như list hoặc array

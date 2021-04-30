@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+import "basic2/date.proto";
+
+message Person {
+    int32               age = 1;
+    string              firsName = 2;
+    string              lastName = 3;
+    bytes               smallPicture = 4;
+    bool                is_validiated = 5;
+    float               height = 6;
+
+    repeated string     phoneNumbers = 7;
+
+    // enum là kiểu dữ liệu mà chúng ta biết sẵn các option của nó, concept là in hoa hết các option
+    enum EyeColour {
+        UNKNOWN_EYE_COLOUR = 0;
+        GREEN = 1;
+        BROWN = 2;
+        BLUE = 3;
+    }
+
+    // định nghĩa enum
+    EyeColour eyeColour = 8;
+
+    Date birthday = 9;
+
+    // message lồng nhau
+    message Address {
+        string address_line_1 = 1;
+        string address_line_2 = 2;
+        string zip_code = 3;
+        string city = 4;
+        string country = 5;
+    }
+
+    repeated Address addresses = 10;
+}

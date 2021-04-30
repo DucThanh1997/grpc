@@ -1,0 +1,24 @@
+syntax = "proto3"
+
+message MyMessage {
+    int32 id = 1;
+    string firsName = 2;
+    bool is_validiated = 3;
+}
+
+message Person {
+    int32       age = 1;
+    string      firstName = 2;
+    string      lastName = 3;
+    bytes       smallPicture = 4;
+    bool        is_validiated = 5;
+    float       height = 6;
+}
+
+// tag là cái số đằng sau tên trường
+// 1 - 15 tốn 1 byte nên sẽ dùng cho các trường popular
+// 16 - 2047 tốn 2 byte
+// còn reserved tag nữa tìm hiểu sau
+
+
+
